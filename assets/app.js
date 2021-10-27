@@ -271,7 +271,6 @@ muteBgMusic.addEventListener('click', (e)=>{
     
     let muteBtn = document.querySelector('.mute img');
     if (initial && isChangingBeforeLoad) {
-        console.log('first if')
 		sound.play();
 		sound.loop = true;
 		if (localStorage.getItem("isMuted")) {
@@ -280,20 +279,17 @@ muteBgMusic.addEventListener('click', (e)=>{
 		isChangingBeforeLoad = false;
 		muteBtn.src = "./icons/unmuted.png";
 	} else if (initial && !isChangingBeforeLoad) {
-        console.log("second if");
 		sound.pause();
 		localStorage.setItem("isMuted", true);
 		muteBtn.src = "./icons/muted1.png";
 		isBgPlaying = false;
 		isChangingBeforeLoad = true;
 	} else if (isBgPlaying && !initial) {
-        console.log("third if");
 		isBgPlaying = !isBgPlaying;
 		sound.pause();
 		muteBtn.src = "./icons/muted1.png";
 		localStorage.setItem("isMuted", "true");
 	} else {
-        console.log('fourth if')
 		isBgPlaying = !isBgPlaying;
 		sound.play();
 		muteBtn.src = "./icons/unmuted.png";
