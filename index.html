@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/app.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hideModal">
+        <div class="hideScore">
+            <h2>Game Over</h2>
+            <h4>High Score: <span class="replay_high_score">0</span></p>
+            <h4>Your Score: <span class="score">0</span></p>
+            <button class="reset-game">Play Again</button>
+        </div>
+    </div>
+    <div class="Play-modal">
+        <div class="play">
+            <h1>Welcome</h1>
+            <h3>Beat The Big Score <span class="high_score"></span></h3>
+            <button class="start-game">Play</button>
+        </div>
+    </div>
+    <div class="canvasContainer">
+        <h2 class="score_updater">Score: <span>0</span></h2>
+        <div class="mute">
+            <img src="./icons/muted1.png"/>
+        </div>
+        <canvas></canvas>
+    </div>
+    <script src="./assets/app.js"></script>
+</body>
+</html>
